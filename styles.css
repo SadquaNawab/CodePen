@@ -1,0 +1,222 @@
+body{
+    margin: 0;
+    padding: 0;
+    /*background-image: linear-gradient(135deg, #536976 10%, #292E49 100%);*/
+    background: linear-gradient(to right, #ff6e7f, #bfe9ff);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+  
+}
+#top{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+#container{
+    height: 100vh;
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+h1{
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+}
+#left{
+    display: flex;
+    flex-direction: column;
+    width: 47%;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+    height: 100%;
+}
+textarea{
+    min-height: 25%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color:whitesmoke;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 5px;
+   
+}
+#right{
+    display: flex;
+    flex-direction: column;
+    width: 47%;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+    height: 100%;
+}
+iframe{
+    background-color: white;
+    min-height: 90%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+label{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 20px;
+}
+#mode{
+    position: fixed; /* Change from sticky to fixed */
+    top: 4%; /* Adjust as needed */
+    left: 20px; /* Adjust as needed */
+    z-index: 1;
+    margin-top: 20px;
+    margin-bottom: 50px;
+   
+}
+#toggle_checkbox
+{
+    display: none;
+}
+
+#labelmode
+{
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    width: 116px;
+    height: 56px;
+    margin: 0 auto;
+    background-color: #77b5fe;
+    border-radius: 56px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: 0.3s ease background-color;
+    overflow: hidden;
+}
+
+#star
+{
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    width: 30px;
+    height: 30px;
+    background-color: #fafd0f;
+    transform: scale(1);
+    border-radius: 50%;
+    transition: 0.3s ease top, 0.3s ease left, 0.3s ease transform, 0.3s ease background-color;
+    z-index: 1;
+}
+
+#star-1
+{
+    position: relative;
+}
+
+#star-2
+{
+    position: absolute;
+    transform: rotateZ(36deg);
+}
+
+.star
+{
+    top: 2.5px;
+    left: -7.9px;
+    font-size: 54px;
+    line-height: 28px;
+    color: #fafd0f;
+    transition: 0.3s ease color;
+}
+
+#moon
+{
+    position: absolute;
+    bottom: -52px;
+    right: 8px;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: 0.3s ease bottom;
+}
+
+#moon:before
+{
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: -17px;
+    width: 40px;
+    height: 40px;
+    background-color:#03a9f4;
+    border-radius: 50%;
+    transition: 0.3s ease background-color;
+}
+
+#toggle_checkbox:checked + label
+{
+    background-color: #000;
+}
+
+#toggle_checkbox:checked + label #star
+{
+    top: 3px;
+    left: 64px;
+    transform: scale(0.3);
+    background-color: yellow;
+}
+
+#toggle_checkbox:checked + label .star
+{
+    color: yellow;
+}
+
+#toggle_checkbox:checked + label #moon
+{
+    bottom: 8px;
+}
+
+#toggle_checkbox:checked + label #moon:before
+{
+    background-color: #000;
+}
+@media only screen and (max-width: 600px)
+{ 
+    body{
+        overflow-x: hidden;
+    }
+    #top{
+        margin-bottom: 20px;
+    }
+    #container{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+    #left{
+        display: flex;
+        width: 96%;
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-bottom: 40px;
+    }
+    #right{
+        width: 96%;
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-top: 60px;
+    }
+    #mode {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 20px;
+        left:1%;
+    }
+}

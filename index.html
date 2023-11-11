@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodePen</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        
+    </style>
+     <script src="https://kit.fontawesome.com/956a628e23.js" crossorigin="anonymous"></script>
+</head>
+<body> 
+    <div id="top">
+        <h1>CODEPEN CLOWN</h1>
+    </div>
+    <div id="mode">
+        <input type="checkbox" id="toggle_checkbox">
+        <label for="toggle_checkbox" id="labelmode">
+        <div id="star">
+        <div class="star" id="star-1">★</div>
+        <div class="star" id="star-2">★</div>
+       </div>
+        <div id="moon"></div>
+        </label>
+     </div>
+    <div id="container">
+        <div id="left">
+            <label><i class="fa-brands fa-html5"></i>HTML</label>
+            <textarea id="html-code" onkeyup="run()"></textarea>
+
+            <label><i class="fa-brands fa-css3-alt"></i>CSS</label>
+            <textarea id="css-code" onkeyup="run()"></textarea>
+
+            <label><i class="fa-brands fa-js"></i>JS</label>
+            <textarea id="js-code" onkeyup="run()"></textarea>
+        </div>
+        <div id="right">
+                <label><i class="fa-solid fa-play"></i>Output</label>
+                <iframe id="output"> </iframe>
+        </div>
+    </div>
+    <script src="file.js"></script>
+</body>
+</html>
